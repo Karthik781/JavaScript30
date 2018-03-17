@@ -34,7 +34,7 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-function displayMatches() {
+function displaMatches() {
   const matchArray = findMatches(this.value, cities);
   const html = matchArray.map(place => {
     const regex = new RegExp(this.value, 'gi');
@@ -51,10 +51,10 @@ function displayMatches() {
 }
 
 const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+const suggestions = document.querySelector('.suggestions')
 
-searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
+searchInput.addEventListener('change', displaMatches);
+searchInput.addEventListener('keyup', displaMatches);
 
 </script>
   </body>
